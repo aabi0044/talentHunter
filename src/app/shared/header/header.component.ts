@@ -29,4 +29,8 @@ export class HeaderComponent implements OnInit {
    }
 
   }
+  dashboard(){
+    this.renderer.setElementProperty(this.side.nativeElement, 'className','');
+    this.renderer.setElementProperty(this.nav.nativeElement, 'className','header-fixed-top ');
+  }
 }
