@@ -15,7 +15,7 @@ password;
   }
 login(){
   if(this.email=='admin' && this.password=='admin'){
-this.router.navigate(['/dashbord/mainpage']);
+this.router.navigate(['dashboard/mainpage']);
   }
 }
 }

@@ -1,7 +1,9 @@
+<body #nav class="header-fixed-top ">
+
 <header class="navbar navbar-default navbar-fixed-top">
   <!-- Header Brand -->
-  <ul class="nav header-nav pull-left">
-    <li class="">
+  <ul class="nav header-nav pull-left" (click)="openSideNav()">
+    <li #side  class="">
         <a href="javascript:void(0)" id="sidebar-left-toggle">
             <i class="fa fa-bars"></i>
         </a>
@@ -10,7 +12,55 @@
   <a routerLink="/dashboard/mainpage" class="navbar-brand">
       <!-- <img src="../../../assets/img/template/drop.png" alt="FreshUI"> -->
       <i class="fa fa-plane " ></i>
-      <span style="font-size: 15px !important">TalentHunter Admin Panel</span>
+      <span style="font-size: 15px !important">TalentHunter</span>
   </a>
   <!-- END Header Brand -->
 </header>
+<div id="sidebar-left" class="enable-hover" style="overflow: auto !important">
+  <!-- Sidebar Content -->
+  <div class="sidebar-content">
+      <!-- Search Form -->
+      <!-- <form action="page_ready_search_results.html" method="post" class="sidebar-search">
+          <input type="text" id="sidebar-search-term" name="sidebar-search-term" placeholder="Search..">
+      </form> -->
+      <!-- END Search Form -->
+
+      <!-- Wrapper for scrolling functionality -->
+      <div class="sidebar-left-scroll">
+          <!-- Sidebar Navigation -->
+          <ul class="sidebar-nav">
+              <li>
+                  <h2 class="sidebar-header">Welcome Admin</h2>
+              </li>
+              <li>
+                  <a ><i class="fa fa-coffee"></i>Dashboard</a>
+              </li>
+              <li>
+                  <h2 class="sidebar-header">Menu</h2>
+              </li>
+              <li>
+                  <a  ><i class="fa fa-user"></i>Employee List</a>
+              </li>
+              <li>
+                <a  ><i class="fa fa-list"></i>Jobs List</a>
+            </li>
+            <li>
+              <a  ><i class="fa fa-briefcase"></i>Business</a>
+          </li>
+          <li>
+            <a  ><i class="fa fa-sign-out"></i>Logout</a>
+        </li>
+
+
+
+
+
+
+          </ul>
+          <!-- END Sidebar Navigation -->
+      </div>
+      <!-- END Wrapper for scrolling functionality -->
+  </div>
+  <!-- END Sidebar Content -->
+</div>
+</body>
