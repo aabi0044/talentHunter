@@ -1,0 +1,16 @@
+.hide{
+  visibility: hidden !important;
+}
+.head{
+  left: 0px !important;
+  right:0px !important;
+}
+.side{
+  left: -201px !important;
+}
+.headundo{
+  left: 201px !important;
+}
+.sideundo{
+  left: 0px !important;
+}

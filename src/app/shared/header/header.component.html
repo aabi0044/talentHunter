@@ -1,6 +1,6 @@
 <body #nav class="header-fixed-top ">
 
-<header class="navbar navbar-default navbar-fixed-top">
+<header class="navbar navbar-default navbar-fixed-top" #header>
   <!-- Header Brand -->
   <ul class="nav header-nav pull-left" (click)="openSideNav()">
     <li #side  class="">
@@ -16,7 +16,7 @@
   </a>
   <!-- END Header Brand -->
 </header>
-<div id="sidebar-left" class="enable-hover" style="overflow: auto !important">
+<div #sidenav id="sidebar-left" class="enable-hover" style="overflow: auto !important" >
   <!-- Sidebar Content -->
   <div class="sidebar-content">
       <!-- Search Form -->
@@ -26,29 +26,29 @@
       <!-- END Search Form -->
 
       <!-- Wrapper for scrolling functionality -->
-      <div class="sidebar-left-scroll">
+      <div  class="sidebar-left-scroll">
           <!-- Sidebar Navigation -->
           <ul class="sidebar-nav">
               <li>
                   <h2 class="sidebar-header">Welcome Admin</h2>
               </li>
-              <li>
-                  <a (click)="dashboard()" ><i class="fa fa-coffee"></i>Dashboard</a>
+              <li (click)="dashboard()">
+                  <a  style="cursor: pointer" ><i class="fa fa-coffee"></i>Dashboard</a>
               </li>
               <li>
                   <h2 class="sidebar-header">Menu</h2>
               </li>
-              <li>
-                  <a routerLink="/employeeList"  ><i class="fa fa-user"></i>Employee List</a>
+              <li (click)="employee()">
+                  <a   style="cursor: pointer"  ><i class="fa fa-user"></i>Employee List</a>
               </li>
-              <li>
-                <a  routerLink="/companylist" ><i class="fa fa-building"></i>Company List</a>
+              <li (click)="company()">
+                <a  style="cursor: pointer"  ><i class="fa fa-building"></i>Company List</a>
             </li>
-              <li>
-                <a  routerLink="/joblist" ><i class="fa fa-list"></i>Jobs List</a>
+              <li (click)="job()">
+                <a  style="cursor: pointer"  ><i class="fa fa-list"></i>Jobs List</a>
             </li>
-            <li>
-              <a  routerLink="/businesslist" ><i class="fa fa-briefcase"></i>Business</a>
+            <li (click)="business()">
+              <a   style="cursor: pointer"  ><i class="fa fa-briefcase"></i>Business</a>
           </li>
           <li>
             <a  ><i class="fa fa-sign-out"></i>Logout</a>
