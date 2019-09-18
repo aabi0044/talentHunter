@@ -1,0 +1,88 @@
+<app-header></app-header>
+<div id="page-content" class="block">
+    <!-- Forms General Header -->
+
+
+    <!-- END Forms General Header -->
+    <div class="block-section" style="margin-top: 45px">
+      <form >
+          <div class="input-group input-group-lg">
+
+              <input [(ngModel)]="searchText"  type="text" name="search" class="form-control" placeholder="Search by OrderNo..">
+              <div class="input-group-btn">
+                  <button class="btn btn-default" ><i class="fa fa-search fa-fw"></i></button>
+              </div>
+          </div>
+      </form>
+  </div>
+
+  <div class="row gutter30">
+    <div class="col-md-12">
+      <!-- Search Block -->
+      <div class="block full">
+        <div class="block-title">
+
+          <h2><i class="fa fa-list"></i> List Of Companies</h2>
+          <!-- <div class=" text-center">
+              <div class="btn-group">
+                  <a  data-toggle="dropdown" class="btn btn-success dropdown-toggle" aria-expanded="false">Choose Type <span class="caret"></span></a>
+                  <ul class="dropdown-menu text-left">
+                      <li class="dropdown-header">Header</li>
+                      <li><a >Action</a></li>
+                      <li><a >Another Action</a></li>
+                      <li class="divider"></li>
+                      <li class="disabled"><a >Disabled</a></li>
+                  </ul>
+              </div>
+          </div> -->
+        </div>
+        <div class="table-responsive">
+          <table id="example-datatable" class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <th class="text-center">#</th>
+                <th class="text-center">Order No</th>
+                <th>User Name</th>
+
+                <th>Price</th>
+                <th>Status</th>
+
+
+              </tr>
+            </thead>
+            <tbody *ngFor="let item of employee | paginate: {id:'user', itemsPerPage: 5, currentPage: p}  ;let i=index "
+            >
+              <tr
+
+                *ngIf="filterCondition(item)" (click)="viewOrder(item)" >
+                <td class="text-center">{{i+1}}</td>
+                <td class="text-center">{{item.id}}</td>
+                <td class="text-center">{{item.customerUserName}}</td>
+
+                <td>{{item.totalAmount}}{{item.currency}}</td>
+                <td *ngIf="item.status=='notDelivered'" style="color:orange">Not Delivered</td>
+                <td *ngIf="item.status=='Delivered'" style="color: green">Delivered</td>
+                <td *ngIf="item.payment==false" style="color: red">Pending</td>
+                <td *ngIf="item.payment==true" style="color: greenyellow">Paid</td>
+
+
+              </tr>
+
+
+            </tbody>
+
+          </table>
+
+        </div>
+        <pagination-controls id="user" (pageChange)="p = $event"></pagination-controls>
+      </div>
+
+
+    </div>
+
+  </div>
+    <!-- Basic Form Elements Block -->
+]
+
+    <!-- END Input Grid Row -->
+  </div>

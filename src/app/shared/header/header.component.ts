@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
   constructor(public renderer: Renderer,private router:Router) { }
 
   ngOnInit() {
+
   }
   openSideNav(){
    console.log(this.side.nativeElement.className);
