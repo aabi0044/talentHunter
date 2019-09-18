@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mainpage.component.css']
 })
 export class MainpageComponent implements OnInit {
-
+package=false;
   constructor() { }
 
   ngOnInit() {
   }
-
+packages(){
+  this.package=true;
+}
 }

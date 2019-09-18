@@ -1,1 +1,163 @@
-<p>mainpage works!</p>
+<div id="fx-container" class="fx-opacity">
+  <div id="page-content" class="block">
+    <div class="block-header">
+      <div class="row remove-margin">
+        <!-- Title -->
+        <div class="col-md-4">
+          <!-- If you do not want a link in the header, instead of .header-title-link you can use a div with the class .header-section -->
+          <a class="header-title-link">
+            <h1><i class="fa fa-plane " aria-hidden="true"></i>TalentHunter Dashboard<br><small>Welcome Admin!</small></h1>
+          </a>
+        </div>
+        <!-- END Title -->
+
+        <!-- Statistics -->
+        <div class="col-md-8">
+          <!-- Outer Grid -->
+          <div class="row">
+            <div class="col-sm-12">
+              <!-- Inner Grid 1 -->
+              <div class="row">
+                <div class="col-xs-12 col-md-4">
+                  <a class="header-link">
+                    <h1 class="animation-pullDown">
+                      <strong>10</strong><br><small>Employess</small>
+                    </h1>
+                  </a>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                  <a class="header-link">
+                    <h1 class="animation-pullDown">
+                      <strong>45</strong><br><small>Complains</small>
+                    </h1>
+                  </a>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                  <a class="header-link">
+                    <h1 class="animation-pullDown">
+                      <strong>12</strong><br><small>Jobs</small>
+                    </h1>
+                  </a>
+                </div>
+              </div>
+              <!-- END Inner Grid 1 -->
+            </div>
+          </div>
+          <!-- END Outer Grid  -->
+        </div>
+        <!-- END Statistics -->
+      </div>
+    </div>
+    <ul class="breadcrumb breadcrumb-top">
+      <li><i class="fa fa-coffee"></i></li>
+      <li><a>Dashboard</a></li>
+    </ul>
+    <div class="row" style=" margin-bottom: 15px !important">
+      <div class="col-xs-12 col-md-4"></div>
+      <div class="col-xs-12 col-md-4" style="text-align: center !important;">
+        <button routerLink="/dashboard/blocked" type="button" class="btn btn-block btn-primary" (click)="packages()">ADD PACKAGES
+        </button>
+      </div>
+      <div class="col-xs-12 col-md-4"></div>
+
+    </div>
+
+    <div class="block" *ngIf="package">
+      <!-- PT On the Grid Title -->
+      <div class="block-title">
+          <h2>Choose Package</h2>
+      </div>
+      <!-- END PT On the Grid Title -->
+
+      <!-- PT On the Grid Content -->
+      <div class="row">
+          <div class="col-sm-4">
+              <table class="table table-borderless table-pricing">
+                  <thead>
+                      <tr>
+                          <th>Package 1</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td><strong>1</strong> active project</td>
+                      </tr>
+                      <!-- <tr>
+                          <td><strong>5GB</strong> File Storage</td>
+                      </tr>
+                      <tr>
+                          <td><strong>20</strong> Clients</td>
+                      </tr>
+                      <tr>
+                          <td><strong>Forum</strong> Support</td>
+                      </tr>
+                      <tr>
+                          <td class="table-price">
+                              <h1>$19<br><small>per month</small></h1>
+                          </td>
+                      </tr> -->
+                      <tr>
+                          <td>
+                              <a  class="btn btn-sm btn-primary">Add Package</a>
+                          </td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+          <div class="col-sm-4">
+              <table class="table table-borderless table-pricing table-featured">
+                  <thead>
+                      <tr>
+                          <th>Package 2</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td><strong>10</strong> active projects</td>
+                      </tr>
+                      <!-- <tr>
+                          <td><strong>20GB</strong> File Storage</td>
+                      </tr>
+                      <tr>
+                          <td><strong>100</strong> Clients</td>
+                      </tr>
+                      <tr>
+                          <td><strong>Email</strong> Support</td>
+                      </tr>
+                      <tr>
+                          <td class="table-price">
+                              <h1>$39<br><small>per month</small></h1>
+                          </td>
+                      </tr> -->
+                      <tr>
+                          <td>
+                              <a class="btn btn-danger">Add Package</a>
+                          </td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+          <div class="col-sm-4">
+              <table class="table table-borderless table-pricing">
+                  <thead>
+                      <tr>
+                          <th>Package 3</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td><strong>50</strong> active projects</td>
+                      </tr>
+
+                      <tr>
+                          <td>
+                              <a  class="btn btn-sm btn-primary">Add Package</a>
+                          </td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+
+      </div>
+      <!-- END PT On the Grid Content -->
+  </div>
